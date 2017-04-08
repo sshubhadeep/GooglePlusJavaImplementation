@@ -55,9 +55,8 @@ public class GooglePlusConsoleDisplay {
     // load client secrets
 	  Reader in = new FileReader("Local directory path for client_secrets.json file");
     GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, in);
-        //new InputStreamReader(PlusSample.class.getResourceAsStream("/client_secrets.json")));
-    if (clientSecrets.getDetails().getClientId().startsWith("Enter")
-        || clientSecrets.getDetails().getClientSecret().startsWith("Enter ")) {
+    if (clientSecrets.getDetails().getClientId().startsWith("Your ")
+        || clientSecrets.getDetails().getClientSecret().startsWith("Your ")) {
       System.out.println(
           "Enter Client ID and Secret from https://code.google.com/apis/console/?api=plus "
           + "into client_secrets.json");
